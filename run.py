@@ -6,11 +6,13 @@ def runGame():
     # While loop which allows player to choose best out of 3 or 5.
     while True:
         try:
-            best_of = int(input('Shall we play best of (3 or 5) rounds?: '))
+            best_of = int(input('Shall we play best of (3 or 5) rounds?:\n '))
             if best_of == 3 or best_of == 5:
                 break
             else:
-                print('Invalid choice...You must choose either best of 3 or 5.')
+                print('Invalid choice...You' 
+                      'must choose either' 
+                      'best of 3 or 5.')
         except ValueError:
             print('Invalid choice...You must choose either best of 3 or 5.')
 
@@ -72,7 +74,9 @@ def runGame():
             player_wins += 1
 
         elif (player_attack, sheldon_attack) in winning_losing_pairs:
-            result = 'Judge rules...You win that round... Lets see if you can keep it up 🤨'
+            result = ('Judge rules...'
+                      'You win that round...' 
+                      'Lets see if you can keep it up 🤨')
             sheldon_wins += 1
         else:
             result = 'Judge rules...I win!!....another step towards victory 😃'
@@ -93,7 +97,8 @@ def runGame():
         print('You lose... Bazinga!! 😈')
 
     while True:
-        challenge_again = input('Would you like to challenge me again?🏆 (Y/N): ')
+        challenge_again = input('Would you like to challenge' 
+                                'me again?🏆 (Y/N): ')
         if challenge_again.lower() == 'n':
             break
         elif challenge_again.lower() == 'y':
